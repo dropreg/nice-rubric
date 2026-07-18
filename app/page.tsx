@@ -87,8 +87,8 @@ export default function Home() {
           <span className="brand-partner">with NICE</span>
         </a>
         <nav aria-label="主导航">
+          <a href="#top">Session 01</a>
           <a href="#about">About</a>
-          <a href="#speakers">Speakers</a>
           <a href="#watch">Watch</a>
         </nav>
         <a className="nav-cta" href="#watch">观看入口 <span aria-hidden="true">→</span></a>
@@ -98,17 +98,14 @@ export default function Home() {
         <div className="hero-glow hero-glow-orange" />
         <div className="hero-glow hero-glow-purple" />
         <div className="hero-grid" />
-        <div className="hero-content">
-          <p className="eyebrow"><span /> NICE × ACADEMIC COMMUNITY · SESSION 01</p>
-          <h1>
-            RUBRIC
-            <span>REWARD MODEL</span>
-            WORKSHOP
-          </h1>
-          <div className="hero-bottom">
+        <div className="hero-layout">
+          <div className="hero-intro">
+            <p className="eyebrow"><span /> NICE × ACADEMIC COMMUNITY</p>
+            <div className="session-label"><b>SESSION</b><strong>01</strong><i>FIRST EDITION</i></div>
+            <h1>RUBRIC<br /><span>REWARD MODEL</span></h1>
             <p className="hero-lead">
               当答案不再只有对与错，<strong>我们如何定义、评估并优化“好答案”？</strong>
-              四位青年研究者，从 rubric 构建、自动评测到强化学习，共同拆解下一代可解释奖励信号。
+              首期邀请四位青年研究者，从 rubric 构建、自动评测到强化学习，共同拆解下一代可解释奖励信号。
             </p>
             <div className="hero-meta">
               <div><span>FORMAT</span><strong>线上学术 Workshop</strong></div>
@@ -116,83 +113,64 @@ export default function Home() {
               <div><span>LANGUAGE</span><strong>中文 / Chinese</strong></div>
             </div>
           </div>
-        </div>
-        <div className="scroll-cue"><span>SCROLL TO EXPLORE</span><i /></div>
-      </section>
 
-      <div className="topic-marquee" aria-label="活动主题">
-        <div>
-          <span>RUBRIC GENERATION</span><b>✦</b><span>REWARD MODELING</span><b>✦</b>
-          <span>LLM-AS-A-JUDGE</span><b>✦</b><span>REINFORCEMENT LEARNING</span><b>✦</b>
-          <span>AUTO-EVALUATION</span><b>✦</b><span>AGENTIC SEARCH</span><b>✦</b>
-        </div>
-      </div>
-
-      <section className="section about" id="about">
-        <div className="section-heading">
-          <p className="eyebrow"><span /> 01 / CONCEPT</p>
-          <h2>什么是 Rubric<br />Reward Model?</h2>
-        </div>
-        <div className="about-copy">
-          <p className="intro">
-            Rubric 是一组<strong>显式、结构化、可检查</strong>的评价标准。它把“这个回答好不好”
-            从模糊的整体偏好，拆解为多个有语义的质量维度。
-          </p>
-          <p>
-            在开放式写作、Deep Research、Agent 轨迹等难以获得唯一标准答案的任务中，
-            Rubric Reward Model 让模型知道<strong>为什么得分、差在哪里、下一步如何改进</strong>，
-            并把这些细粒度判断转化为可用于训练的奖励信号。
-          </p>
-          <div className="formula" aria-label="Rubric 奖励模型计算示意">
-            <span>R(x, y)</span>
-            <b>=</b>
-            <span>AGG</span>
-            <i>(</i>
-            <code>r₁: factuality</code>
-            <code>r₂: coverage</code>
-            <code>r₃: reasoning</code>
-            <i>)</i>
+          <div className="guest-panel" id="speakers">
+            <div className="guest-panel-heading">
+              <span>01 / INVITED SPEAKERS</span>
+              <strong>首期嘉宾</strong>
+              <p>四种研究视角，一套更好的评价标准。</p>
+            </div>
+            <div className="guest-grid">
+              {speakers.map((speaker) => (
+                <article className="guest-card" key={speaker.name}>
+                  <div className="guest-image">
+                    <img src={`${basePath}${speaker.image}`} alt={`${speaker.name}肖像`} />
+                    <span>{speaker.number}</span>
+                  </div>
+                  <div className="guest-content">
+                    <p>{speaker.focus}</p>
+                    <h2>{speaker.name}<small>{speaker.englishName}</small></h2>
+                    <strong>{speaker.role}</strong>
+                    <div className="guest-links">
+                      <a href={speaker.homepage} target="_blank" rel="noreferrer">主页 <Arrow /></a>
+                      <a href={speaker.paper} target="_blank" rel="noreferrer">{speaker.paperName} <Arrow /></a>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="process" aria-label="Rubric Reward Model 工作流程">
-        {steps.map((step) => (
-          <article key={step.key}>
-            <span>{step.key}</span>
-            <h3>{step.title}</h3>
-            <p>{step.text}</p>
-          </article>
-        ))}
-      </section>
-
-      <section className="section speakers-section" id="speakers">
-        <div className="section-heading speaker-heading">
-          <p className="eyebrow"><span /> 02 / INVITED SPEAKERS</p>
-          <h2>四种视角，<br />一套更好的标准。</h2>
-          <p>从研究版图到前沿方法，从评测基准到强化学习实践。</p>
+      <section className="about" id="about">
+        <div className="about-top">
+          <div className="section-heading">
+            <p className="eyebrow"><span /> 02 / CONCEPT</p>
+            <h2>什么是 Rubric<br />Reward Model?</h2>
+          </div>
+          <div className="about-copy">
+            <p className="intro">
+              Rubric 是一组<strong>显式、结构化、可检查</strong>的评价标准。它把“这个回答好不好”
+              从模糊的整体偏好，拆解为多个有语义的质量维度。
+            </p>
+            <p>
+              在开放式写作、Deep Research、Agent 轨迹等难以获得唯一标准答案的任务中，
+              Rubric Reward Model 让模型知道<strong>为什么得分、差在哪里、下一步如何改进</strong>，
+              并把这些细粒度判断转化为可用于训练的奖励信号。
+            </p>
+            <div className="formula" aria-label="Rubric 奖励模型计算示意">
+              <span>R(x, y)</span><b>=</b><span>AGG</span><i>(</i>
+              <code>r₁: factuality</code><code>r₂: coverage</code><code>r₃: reasoning</code><i>)</i>
+            </div>
+          </div>
         </div>
-        <div className="speakers-list">
-          {speakers.map((speaker) => (
-            <article className="speaker-card" key={speaker.name}>
-              <div className="speaker-number">{speaker.number}</div>
-              <div className="portrait-wrap">
-                <img src={`${basePath}${speaker.image}`} alt={`${speaker.name}肖像`} />
-              </div>
-              <div className="speaker-main">
-                <p className="speaker-focus">{speaker.focus}</p>
-                <h3>{speaker.name}<span>{speaker.englishName}</span></h3>
-                <p className="speaker-role">{speaker.role}</p>
-                <p className="speaker-bio">{speaker.bio}</p>
-              </div>
-              <div className="speaker-topic">
-                <span>RESEARCH THREAD</span>
-                <p>{speaker.topic}</p>
-                <div className="speaker-links">
-                  <a href={speaker.homepage} target="_blank" rel="noreferrer">个人主页 <Arrow /></a>
-                  <a href={speaker.paper} target="_blank" rel="noreferrer">{speaker.paperName} <Arrow /></a>
-                </div>
-              </div>
+        <div className="process" aria-label="Rubric Reward Model 工作流程">
+          {steps.map((step) => (
+            <article key={step.key}>
+              <span>{step.key}</span>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
             </article>
           ))}
         </div>
