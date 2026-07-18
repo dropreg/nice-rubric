@@ -71,33 +71,6 @@ const steps = [
   },
 ];
 
-const readingList = [
-  {
-    tag: "SURVEY",
-    title: "The Rules of the Game: A Survey of Rubrics for Large Language Models",
-    meta: "Liu et al. · 2026",
-    href: "https://github.com/RUC-NLPIR/Rubrics_Survey",
-  },
-  {
-    tag: "AGENT / RL",
-    title: "RubricEM: Meta-RL with Rubric-guided Policy Decomposition beyond Verifiable Rewards",
-    meta: "Li et al. · 2026",
-    href: "https://arxiv.org/abs/2605.10899",
-  },
-  {
-    tag: "BENCHMARK",
-    title: "RubricBench: Aligning Model-Generated Rubrics with Human Standards",
-    meta: "Zhang et al. · ACL 2026",
-    href: "https://arxiv.org/abs/2603.01562",
-  },
-  {
-    tag: "REASONING / RL",
-    title: "Breaking the Exploration Bottleneck: Rubric-Scaffolded RL for General LLM Reasoning",
-    meta: "Zhou et al. · ICML 2026",
-    href: "https://arxiv.org/abs/2508.16949",
-  },
-];
-
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
@@ -116,7 +89,6 @@ export default function Home() {
         <nav aria-label="主导航">
           <a href="#about">About</a>
           <a href="#speakers">Speakers</a>
-          <a href="#materials">Materials</a>
           <a href="#watch">Watch</a>
         </nav>
         <a className="nav-cta" href="#watch">观看入口 <span aria-hidden="true">→</span></a>
@@ -226,33 +198,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section materials" id="materials">
-        <div className="section-heading">
-          <p className="eyebrow"><span /> 03 / READING ROOM</p>
-          <h2>会前阅读</h2>
-          <p>四条精选研究线索，帮助你带着更具体的问题进入 workshop。</p>
-        </div>
-        <div className="reading-list">
-          {readingList.map((item, index) => (
-            <a href={item.href} target="_blank" rel="noreferrer" key={item.title}>
-              <span className="reading-index">0{index + 1}</span>
-              <div><small>{item.tag}</small><h3>{item.title}</h3><p>{item.meta}</p></div>
-              <Arrow />
-            </a>
-          ))}
-        </div>
-        <div className="resource-note">
-          <span>SLIDES & MORE</span>
-          <p>嘉宾 PPT、讲义与补充资料将在活动后持续更新到本页。</p>
-          <strong>COMING SOON</strong>
-        </div>
-      </section>
-
       <section className="watch" id="watch">
         <div className="watch-orbit orbit-one" />
         <div className="watch-orbit orbit-two" />
         <div className="watch-inner">
-          <p className="eyebrow"><span /> 04 / RECORDINGS</p>
+          <p className="eyebrow"><span /> 03 / RECORDINGS</p>
           <h2>错过直播？<br /><em>思想仍在继续。</em></h2>
           <p>
             首期四场分享的完整录像、时间轴与演讲资料将在活动结束后汇总于此。
