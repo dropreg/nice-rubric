@@ -76,8 +76,12 @@ function Arrow() {
 }
 
 function RootBrand({ className = "" }: { className?: string }) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
-    <span className={`root-brand ${className}`} aria-label="根号下 R 平方，M">√(R²)M</span>
+    <span className={`root-brand ${className}`}>
+      <img src={`${basePath}/assets/r2m-logo.png`} alt="根号下 R 平方，M" />
+    </span>
   );
 }
 
