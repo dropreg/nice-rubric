@@ -75,6 +75,16 @@ function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
 
+function RootBrand({ className = "" }: { className?: string }) {
+  return (
+    <span className={`root-brand ${className}`} aria-label="根号下 R 平方 M">
+      <span className="radical" aria-hidden="true">√</span>
+      <span className="radicand" aria-hidden="true">R²</span>
+      <span className="brand-m" aria-hidden="true">M</span>
+    </span>
+  );
+}
+
 export default function Home() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -82,7 +92,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Rubric Reward Model Workshop 首页">
-          <span className="brand-mark">R²M</span>
+          <RootBrand className="brand-mark" />
           <span className="brand-line" />
           <span className="brand-partner">with NICE</span>
         </a>
@@ -101,7 +111,15 @@ export default function Home() {
         <div className="hero-layout">
           <div className="hero-intro">
             <p className="eyebrow"><span /> NICE × ACADEMIC COMMUNITY</p>
-            <div className="session-label"><b>SESSION</b><strong>01</strong><i>FIRST EDITION</i></div>
+            <div className="session-tools">
+              <div className="session-label"><b>SESSION</b><strong>01</strong><i>FIRST EDITION</i></div>
+              <div className="session-switcher" role="group" aria-label="Workshop 期数切换">
+                <span>期数</span>
+                <a href="#top" aria-current="page"><b>01</b><small>当前</small></a>
+                <button type="button" disabled aria-label="第 02 期，敬请期待"><b>02</b><small>SOON</small></button>
+                <button type="button" disabled aria-label="第 03 期，敬请期待"><b>03</b><small>SOON</small></button>
+              </div>
+            </div>
             <h1>RUBRIC<br /><span>REWARD MODEL</span></h1>
             <p className="hero-lead">
               当答案不再只有对与错，<strong>我们如何定义、评估并优化“好答案”？</strong>
@@ -110,7 +128,6 @@ export default function Home() {
             <div className="hero-meta">
               <div><span>FORMAT</span><strong>线上学术 Workshop</strong></div>
               <div><span>STATUS</span><strong className="live-dot">预热中 · Coming Soon</strong></div>
-              <div><span>LANGUAGE</span><strong>中文 / Chinese</strong></div>
             </div>
           </div>
 
@@ -207,7 +224,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="footer-brand"><strong>R²M</strong><span>Rubric Reward Model Workshop</span></div>
+        <div className="footer-brand"><RootBrand className="footer-logo" /><span>Rubric Reward Model Workshop</span></div>
         <p>与 NICE 联合发起 · 连接研究者、实践者与每一个对可信 AI 好奇的人。</p>
         <div className="footer-links">
           <a href="https://nice-intl.github.io/" target="_blank" rel="noreferrer">NICE <Arrow /></a>
