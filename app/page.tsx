@@ -77,11 +77,7 @@ function Arrow() {
 
 function RootBrand({ className = "" }: { className?: string }) {
   return (
-    <span className={`root-brand ${className}`} aria-label="根号下 R 平方 M">
-      <span className="radical" aria-hidden="true">√</span>
-      <span className="radicand" aria-hidden="true">R²</span>
-      <span className="brand-m" aria-hidden="true">M</span>
-    </span>
+    <span className={`root-brand ${className}`} aria-label="根号下 R 平方，M">√(R²)M</span>
   );
 }
 
@@ -97,11 +93,20 @@ export default function Home() {
           <span className="brand-partner">with NICE</span>
         </a>
         <nav aria-label="主导航">
-          <a href="#top">Session 01</a>
           <a href="#about">About</a>
           <a href="#watch">Watch</a>
         </nav>
-        <a className="nav-cta" href="#watch">观看入口 <span aria-hidden="true">→</span></a>
+        <div className="header-actions">
+          <details className="session-menu">
+            <summary><span>SESSION</span><strong>01</strong><i aria-hidden="true">⌄</i></summary>
+            <div className="session-dropdown">
+              <a href="#top" aria-current="page"><span>第 01 期</span><strong>Rubric Reward Model</strong><em>CURRENT</em></a>
+              <div aria-disabled="true"><span>第 02 期</span><strong>主题待公布</strong><em>SOON</em></div>
+              <div aria-disabled="true"><span>第 03 期</span><strong>主题待公布</strong><em>SOON</em></div>
+            </div>
+          </details>
+          <a className="nav-cta" href="#watch">观看入口 <span aria-hidden="true">→</span></a>
+        </div>
       </header>
 
       <section className="hero" id="top">
@@ -111,15 +116,6 @@ export default function Home() {
         <div className="hero-layout">
           <div className="hero-intro">
             <p className="eyebrow"><span /> NICE × ACADEMIC COMMUNITY</p>
-            <div className="session-tools">
-              <div className="session-label"><b>SESSION</b><strong>01</strong><i>FIRST EDITION</i></div>
-              <div className="session-switcher" role="group" aria-label="Workshop 期数切换">
-                <span>期数</span>
-                <a href="#top" aria-current="page"><b>01</b><small>当前</small></a>
-                <button type="button" disabled aria-label="第 02 期，敬请期待"><b>02</b><small>SOON</small></button>
-                <button type="button" disabled aria-label="第 03 期，敬请期待"><b>03</b><small>SOON</small></button>
-              </div>
-            </div>
             <h1>RUBRIC<br /><span>REWARD MODEL</span></h1>
             <p className="hero-lead">
               当答案不再只有对与错，<strong>我们如何定义、评估并优化“好答案”？</strong>
@@ -224,7 +220,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="footer-brand"><RootBrand className="footer-logo" /><span>Rubric Reward Model Workshop</span></div>
+        <div className="footer-brand"><RootBrand className="footer-logo" /><span className="footer-caption">Rubric Reward Model Workshop</span></div>
         <p>与 NICE 联合发起 · 连接研究者、实践者与每一个对可信 AI 好奇的人。</p>
         <div className="footer-links">
           <a href="https://nice-intl.github.io/" target="_blank" rel="noreferrer">NICE <Arrow /></a>
