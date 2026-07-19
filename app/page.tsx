@@ -225,7 +225,7 @@ export default function Home() {
 
       <footer>
         <div className="footer-brand"><RootBrand className="footer-logo" /><span className="footer-caption">Rubric Reward Model Workshop</span></div>
-        <p>与 NICE 联合发起 · 连接研究者、实践者与每一个对可信 AI 好奇的人。</p>
+        <p><span className="footer-mission-label">OUR MISSION</span>Reward is the Prism of Intelligence</p>
         <div className="footer-links">
           <a href="https://nice-intl.github.io/" target="_blank" rel="noreferrer">NICE <Arrow /></a>
           <a href="#top">回到顶部 ↑</a>
