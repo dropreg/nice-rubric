@@ -141,7 +141,11 @@ export default function Home() {
               {speakers.map((speaker) => (
                 <article className="guest-card" key={speaker.name}>
                   <div className="guest-image">
-                    <img src={`${basePath}${speaker.image}`} alt={`${speaker.name}肖像`} />
+                    <img
+                      className={speaker.name === "刘文涵" || speaker.name === "周阳" ? "portrait-lower" : undefined}
+                      src={`${basePath}${speaker.image}`}
+                      alt={`${speaker.name}肖像`}
+                    />
                     <span>{speaker.number}</span>
                   </div>
                   <div className="guest-content">
