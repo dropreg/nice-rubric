@@ -84,8 +84,8 @@ nav a:hover, .nav-cta:hover { color: var(--white); }
 .guest-image img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 24%; transition: transform .35s; }
 .guest-card:hover .guest-image img { transform: scale(1.025); }
 .guest-image:has(.portrait-lower) { background: #fff; }
-.guest-image img.portrait-lower { transform: translateY(4%); }
-.guest-card:hover .guest-image img.portrait-lower { transform: translateY(4%) scale(1.025); }
+.guest-image img.portrait-lower { transform: translateY(15%); }
+.guest-card:hover .guest-image img.portrait-lower { transform: translateY(15%) scale(1.025); }
 .guest-image span { position: absolute; left: 10px; top: 10px; padding: 6px 7px; background: rgba(8,8,8,.75); color: var(--white); font: 400 .68rem/1 var(--font-mono); }
 .guest-content { min-width: 0; display: flex; flex-direction: column; justify-content: center; padding: 18px; }
 .guest-content > p { margin: 0 0 12px; color: var(--orange); font: 400 .67rem/1.4 var(--font-mono); letter-spacing: .04em; text-transform: uppercase; }
