@@ -139,7 +139,6 @@ export default function Home() {
             <div className="guest-panel-heading">
               <span>01 / INVITED SPEAKERS</span>
               <strong>首期嘉宾</strong>
-              <p>四种研究视角，一套更好的评价标准。</p>
             </div>
             <div className="guest-grid">
               {speakers.map((speaker) => (
@@ -185,10 +184,6 @@ export default function Home() {
               Rubric Reward Model 让模型知道<strong>为什么得分、差在哪里、下一步如何改进</strong>，
               并把这些细粒度判断转化为可用于训练的奖励信号。
             </p>
-            <div className="formula" aria-label="Rubric 奖励模型计算示意">
-              <span>R(x, y)</span><b>=</b><span>AGG</span><i>(</i>
-              <code>r₁: factuality</code><code>r₂: coverage</code><code>r₃: reasoning</code><i>)</i>
-            </div>
           </div>
         </div>
         <div className="process" aria-label="Rubric Reward Model 工作流程">
@@ -219,15 +214,6 @@ export default function Home() {
             <a className="text-button" href="https://www.youtube.com/@niceaitalk" target="_blank" rel="noreferrer">
               YouTube 频道 <Arrow />
             </a>
-          </div>
-          <div className="recording-grid">
-            {speakers.map((speaker) => (
-              <div key={speaker.name}>
-                <span>{speaker.number}</span>
-                <strong>{speaker.name}</strong>
-                <small>VIDEO · 待发布</small>
-              </div>
-            ))}
           </div>
         </div>
       </section>

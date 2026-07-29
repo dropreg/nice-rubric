@@ -74,10 +74,9 @@ nav a:hover, .nav-cta:hover { color: var(--white); }
 .live-dot::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 7px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 12px var(--orange); }
 
 .guest-panel { align-self: stretch; display: grid; grid-template-rows: auto 1fr; border: 1px solid var(--border); background: rgba(8,8,8,.48); backdrop-filter: blur(12px); }
-.guest-panel-heading { display: grid; grid-template-columns: auto 1fr auto; align-items: baseline; gap: 18px; padding: 20px 22px; border-bottom: 1px solid var(--border); }
+.guest-panel-heading { display: grid; grid-template-columns: auto 1fr; align-items: baseline; gap: 18px; padding: 20px 22px; border-bottom: 1px solid var(--border); }
 .guest-panel-heading > span { color: var(--orange); font: 400 .7rem/1 var(--font-mono); letter-spacing: .12em; }
 .guest-panel-heading strong { font: 600 1.3rem/1 var(--font-syne); }
-.guest-panel-heading p { margin: 0; color: var(--faint); font-size: .82rem; }
 .guest-grid { display: grid; grid-template-columns: repeat(2, 1fr); }
 .guest-card { min-height: 0; display: grid; grid-template-columns: 38% 1fr; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transition: background .25s; }
 .guest-card:nth-child(2n) { border-right: 0; }
@@ -108,10 +107,6 @@ nav a:hover, .nav-cta:hover { color: var(--white); }
 .about-copy p { color: var(--dim); font-size: 1rem; line-height: 1.9; font-weight: 300; }
 .about-copy .intro { margin: 0 0 24px; color: var(--white); font-size: clamp(1.3rem, 2vw, 1.9rem); line-height: 1.55; }
 .about-copy strong { color: var(--orange); font-weight: 500; }
-.formula { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 40px; padding: 22px 0; border-block: 1px solid var(--border); font: 400 .75rem/1 var(--font-mono); }
-.formula > span { color: var(--white); }
-.formula b, .formula i { color: var(--faint); font-style: normal; }
-.formula code { padding: 9px 12px; border: 1px solid var(--border); border-radius: 100px; color: var(--dim); font: inherit; }
 .process { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 70px; border: 1px solid var(--border); }
 .process article { min-height: 210px; padding: 28px 32px; border-right: 1px solid var(--border); transition: background .25s; }
 .process article:last-child { border: 0; }
@@ -130,11 +125,6 @@ nav a:hover, .nav-cta:hover { color: var(--white); }
 .primary-button { padding: 17px 24px; background: var(--orange); color: var(--black); font: 500 .76rem/1 var(--font-mono); letter-spacing: .05em; }
 .primary-button:hover { background: #f3742d; }
 .text-button { color: var(--dim); font: 400 .74rem/1 var(--font-mono); border-bottom: 1px solid var(--faint); padding-bottom: 7px; }
-.recording-grid { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 68px; border: 1px solid var(--border); text-align: left; }
-.recording-grid > div { display: grid; gap: 10px; padding: 22px; border-right: 1px solid var(--border); }
-.recording-grid > div:last-child { border: 0; }
-.recording-grid span, .recording-grid small { color: var(--faint); font: 400 .7rem/1 var(--font-mono); letter-spacing: .09em; }
-.recording-grid strong { font: 500 1rem/1.2 var(--font-syne); }
 .watch-orbit { position: absolute; border: 1px solid var(--border); border-radius: 50%; }
 .orbit-one { width: 78vw; height: 78vw; }
 .orbit-two { width: 48vw; height: 48vw; border-color: rgba(232,98,26,.13); }
@@ -181,12 +171,8 @@ footer > p { max-width: 460px; margin: 0; color: var(--dim); line-height: 1.7; f
   .process { grid-template-columns: 1fr; margin-top: 50px; }
   .process article { min-height: auto; border-right: 0; border-bottom: 1px solid var(--border); }
   .process h3 { margin-top: 36px; }
-  .formula { align-items: flex-start; }
   .watch { min-height: auto; padding: 100px 20px; }
   .watch-actions { flex-direction: column; }
-  .recording-grid { grid-template-columns: 1fr 1fr; }
-  .recording-grid > div:nth-child(2) { border-right: 0; }
-  .recording-grid > div:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
   .orbit-one { width: 150vw; height: 150vw; }
   .orbit-two { width: 90vw; height: 90vw; }
   footer { grid-template-columns: 1fr; gap: 30px; padding: 48px 20px; }
