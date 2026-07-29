@@ -4,9 +4,8 @@ const speakers = [
     name: "李高棠",
     englishName: "Gaotang Li",
     role: "UIUC · Computer Science Ph.D.",
-    focus: "Scaling Foundation Models · Post-training",
-    bio: "专注于基础模型规模化、推理与智能体能力，以及覆盖学习、评判和推理的完整后训练链路。",
-    topic: "Rubric 如何从终局评判，走向长轨迹 Agent 的过程监督与策略演化。",
+    bio: "伊利诺伊大学厄巴纳-香槟分校博士生，主要研究方向为语言模型训练，致力于提升模型的推理能力，以及模型在自主规划、工具使用和长程任务执行等场景中的表现。",
+    topic: "Towards Training Open-Ended Deep Research Agents Beyond Verifiable Rewards",
     image: "/speakers/gaotang-li.png",
     homepage: "https://gaotangli.github.io/",
     paper: "https://arxiv.org/abs/2605.10899",
@@ -17,9 +16,8 @@ const speakers = [
     name: "刘文涵",
     englishName: "Wenhan Liu",
     role: "中国人民大学高瓴人工智能学院 · Ph.D.",
-    focus: "AI Search · Ranking · Deep Search",
-    bio: "研究 AI Search，包括 LLM for Ranking、Deep Search 与 Conversational Search，并持续梳理 Rubric 研究版图。",
-    topic: "从概念、构建到训练与评测：Rubric for LLM 的方法谱系与开放问题。",
+    bio: "中国人民大学高瓴人工智能学院博士生，导师为窦志成教授。研究方向聚焦大模型智能体与 AI 搜索，以第一作者身份发表 CCF-A/B 类论文 7 篇，曾在 ACL、WWW 等国际会议进行 Oral Presentation。现于阿里巴巴通义千问基座模型团队实习。",
+    topic: "A Survey of Rubrics for Large Language Models",
     image: "/speakers/wenhan-liu.jpg",
     homepage: "https://8421bcd.github.io/",
     paper: "https://github.com/RUC-NLPIR/Rubrics_Survey",
@@ -30,9 +28,8 @@ const speakers = [
     name: "张启源",
     englishName: "Qiyuan Zhang",
     role: "香港城市大学 · Ph.D.",
-    focus: "Auto-evaluation · Reward Modeling",
-    bio: "研究自动评测、奖励与偏好建模、LLM-as-a-Judge，以及面向大模型的 test-time scaling。",
-    topic: "怎样评估一份 Rubric 本身：从人类标准对齐到生成式 Reward Model。",
+    bio: "香港城市大学计算机科学系博士生，导师为马辰教授。研究方向聚焦 LLM-as-a-Judge、奖励模型与 RLHF 后训练技术，曾在腾讯混元和阿里巴巴通义千问团队实习。",
+    topic: "RubricBench: Aligning Model-Generated Rubrics with Human Standards",
     image: "/speakers/qiyuan-zhang.jpg",
     homepage: "https://zhangqiyuan-rico.github.io/",
     paper: "https://arxiv.org/abs/2603.01562",
@@ -43,9 +40,8 @@ const speakers = [
     name: "周阳",
     englishName: "Yang Zhou",
     role: "浙江大学 · M.Eng.",
-    focus: "Reinforcement Learning · Embodied AI",
-    bio: "研究强化学习、Agentic LLM、VLA 与具身智能，并在 rubric-guided reasoning 与数据构建方向开展工作。",
-    topic: "把 Rubric 变成探索脚手架：为通用 LLM 推理提供更细粒度的强化学习信号。",
+    bio: "浙江大学 ACES 实验室硕士生，导师为蔡钰祥教授。研究方向聚焦强化学习、大模型智能体与模型后训练。目前于卓驭科技实习，曾在理想汽车和字节跳动 Seed 团队实习。",
+    topic: "How to Generate and Effectively Use High-Quality Rubrics",
     image: "/speakers/yang-zhou.jpg",
     homepage: "https://iannxang.github.io/",
     paper: "https://arxiv.org/abs/2508.16949",
@@ -149,9 +145,10 @@ export default function Home() {
                     <span>{speaker.number}</span>
                   </div>
                   <div className="guest-content">
-                    <p>{speaker.focus}</p>
+                    <p className="guest-talk"><span>TALK TITLE</span>{speaker.topic}</p>
                     <h2>{speaker.name}<small>{speaker.englishName}</small></h2>
                     <strong>{speaker.role}</strong>
+                    <p className="guest-bio">{speaker.bio}</p>
                     <div className="guest-links">
                       <a href={speaker.homepage} target="_blank" rel="noreferrer">主页 <Arrow /></a>
                       <a href={speaker.paper} target="_blank" rel="noreferrer">{speaker.paperName} <Arrow /></a>
