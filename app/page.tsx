@@ -1,18 +1,6 @@
 const speakers = [
   {
     number: "01",
-    name: "李高棠",
-    englishName: "Gaotang Li",
-    role: "UIUC · Computer Science Ph.D.",
-    bio: "伊利诺伊大学厄巴纳-香槟分校博士生，主要研究方向为语言模型训练，致力于提升模型的推理能力，以及模型在自主规划、工具使用和长程任务执行等场景中的表现。",
-    topic: "Towards Training Open-Ended Deep Research Agents Beyond Verifiable Rewards",
-    image: "/speakers/gaotang-li.png",
-    homepage: "https://gaotangli.github.io/",
-    paper: "https://arxiv.org/abs/2605.10899",
-    paperName: "RubricEM",
-  },
-  {
-    number: "02",
     name: "刘文涵",
     englishName: "Wenhan Liu",
     role: "中国人民大学高瓴人工智能学院 · Ph.D.",
@@ -22,6 +10,18 @@ const speakers = [
     homepage: "https://8421bcd.github.io/",
     paper: "https://github.com/RUC-NLPIR/Rubrics_Survey",
     paperName: "Rubrics Survey",
+  },
+  {
+    number: "02",
+    name: "李高棠",
+    englishName: "Gaotang Li",
+    role: "UIUC · Computer Science Ph.D.",
+    bio: "伊利诺伊大学厄巴纳-香槟分校博士生，主要研究方向为语言模型训练，致力于提升模型的推理能力，以及模型在自主规划、工具使用和长程任务执行等场景中的表现。",
+    topic: "Towards Training Open-Ended Deep Research Agents Beyond Verifiable Rewards",
+    image: "/speakers/gaotang-li.png",
+    homepage: "https://gaotangli.github.io/",
+    paper: "https://arxiv.org/abs/2605.10899",
+    paperName: "RubricEM",
   },
   {
     number: "03",
