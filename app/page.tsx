@@ -100,7 +100,11 @@ export default function Home() {
           <details className="session-menu">
             <summary><span>SESSION</span><strong>01</strong><i aria-hidden="true">⌄</i></summary>
             <div className="session-dropdown">
-              <a href="#top" aria-current="page"><span>第 01 期</span><strong>Rubric Reward Model</strong><em>CURRENT</em></a>
+              <a href="#top" aria-current="page">
+                <span>第 01 期</span>
+                <strong>Beyond Verifiable Rewards<small>Rubrics for Open-Ended Tasks</small></strong>
+                <em>CURRENT</em>
+              </a>
               <div aria-disabled="true"><span>第 02 期</span><strong>主题待公布</strong><em>SOON</em></div>
               <div aria-disabled="true"><span>第 03 期</span><strong>主题待公布</strong><em>SOON</em></div>
             </div>
@@ -116,7 +120,11 @@ export default function Home() {
         <div className="hero-layout">
           <div className="hero-intro">
             <p className="eyebrow"><span /> NICE × ACADEMIC COMMUNITY</p>
-            <h1>RUBRIC<br /><span>REWARD MODEL</span></h1>
+            <h1>
+              BEYOND<br /><span>VERIFIABLE</span><br />REWARDS
+              <small>Rubrics for Open-Ended Tasks</small>
+            </h1>
+            <p className="hero-title-cn">不止于可验证奖励：面向开放式任务的 Rubric</p>
             <p className="hero-lead">
               当答案不再只有对与错，<strong>我们如何定义、评估并优化“好答案”？</strong>
               首期邀请四位青年研究者，从 rubric 构建、自动评测到强化学习，共同拆解下一代可解释奖励信号。
