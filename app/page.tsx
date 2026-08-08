@@ -131,7 +131,7 @@ export default function Home() {
             </p>
             <div className="hero-meta">
               <div><span>FORMAT</span><strong>线上学术 Workshop</strong></div>
-              <div><span>STATUS</span><strong className="live-dot">预热中 · Coming Soon</strong></div>
+              <div><span>STATUS</span><strong>直播结束 · Ended</strong></div>
             </div>
           </div>
 
@@ -204,12 +204,12 @@ export default function Home() {
           <p className="eyebrow"><span /> 03 / RECORDINGS</p>
           <h2>错过直播？<br /><em>思想仍在继续。</em></h2>
           <p>
-            首期四场分享的完整录像、时间轴与演讲资料将在活动结束后汇总于此。
-            你可以先收藏页面，或前往 NICE 视频频道关注更新。
+            首期四场分享的完整录像现已上线。点击下方按钮，即可前往 Bilibili
+            回看本期 Workshop。
           </p>
           <div className="watch-actions">
-            <a className="primary-button" href="https://space.bilibili.com/507524288" target="_blank" rel="noreferrer">
-              前往 NICE Bilibili <Arrow />
+            <a className="primary-button" href="https://www.bilibili.com/video/BV1Pmux6zEqQ/" target="_blank" rel="noreferrer">
+              观看完整回放 <Arrow />
             </a>
             <a className="text-button" href="https://www.youtube.com/@niceaitalk" target="_blank" rel="noreferrer">
               YouTube 频道 <Arrow />
